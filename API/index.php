@@ -5,6 +5,9 @@ require_once 'app/models/hg-api.php';
 $hg = new HG_API(HG_API_KEY);
 $dolar = $hg->dolar_quotation();
 
+if (!$hg->is_error()) {
+    $variation = ($dolar['variation'] > 0) ? 'danger' : 'info';
+}
 ?>
 
 <!doctype html>
@@ -23,7 +26,11 @@ $dolar = $hg->dolar_quotation();
         <div class="row">
             <div class="col-12">
                 <p>Cotação Dólar</p>
-                <p>USD<span class="badge badge-pill badge-primary">XXXX</span></p>
+                <?php if ($hg->is_error() == false): ?>
+                  <p>USD <span class="badge badge-pill badge-<?php echo $variation; ?>"><?php echo $dolar['buy']; ?></span></p>
+                <?php else: ?>
+                  <p>USD<span class="badge badge-pill badge-danger">Serviços indisponíveis</span></p>
+                <?php endif; ?>
             </div>
         </div>
     </div>

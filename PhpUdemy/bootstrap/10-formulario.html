@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>4 - Formulario</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <style>
+        .container {
+            max-width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <h3>Acessar Conta</h3>
+        <form action="">
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="nome@exemplo.com"
+                    aria-describedby="helpId">
+                <small id="helpId" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Senha</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+            </div>
+
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" name="exampleCheck1" id="exampleCheck1" value="checkedValue"
+                    checked>
+                <label class="form-check-label" for="exampleCheck1"> Manter conectado</label>
+            </div>
+
+            <button type="button" name="btn-entrar" id="btn-entrar" class="btn btn-primary btn-lg btn-block">Entrar</button>
+        </form>
+
+        <br><br>
+        <hr><br>
+
+        <h3>Cadastrar Usuário</h3>
+        <form action="">
+            <div class="form-group">
+                <label for="nome">Nome completo</label>
+                <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome completo">
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="nome@exemplo.com"
+                    aria-describedby="helpId">
+                <small id="helpId" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" class="form-control" placeholder="Senha com 6 caracteres">
+            </div>
+
+            <div class="form-group">
+                <label for="select">Dia</label>
+                <select class="form-control" name="select" id="select">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="textarea">Mensagem</label>
+                <textarea class="form-control" name="textarea" id="textarea" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="userReadOnly">Usuário</label>
+                <input type="text" class="form-control" name="userReadOnly" id="userReadOnly" placeholder="cesar123"
+                    readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="emailReadOnly">E-mail principal</label>
+                <input type="text" class="form-control-plaintext" name="emailReadOnly" id="emailReadOnly" value="cesar@celke.com.br"
+                    readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="file">Importar Foto</label>
+                <input type="file" class="form-control-file" name="file" id="file">
+            </div>
+
+            <div class="form-group">
+                <label>Disciplinas:</label>
+
+                <div class="form-check form-check-inline ml-2">
+                    <input type="checkbox" id="matematica" class="form-check-input" checked>
+                    <label class="form-check-label" for="matematica">Matemática</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" id="geografia" class="form-check-input">
+                    <label class="form-check-label" for="geografia">Geografia</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" id="filosofia" class="form-check-input" disabled>
+                    <label class="form-check-label" for="filosofia">Filosofia</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Situação:</label>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="situacao" value="option1"
+                            checked>
+                        Ativo
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="situacao" value="option2">
+                        Inativo
+                    </label>
+                </div>
+
+                <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="situacao" value="option3" disabled>
+                            Aguardando situação
+                        </label>
+                    </div>
+            </div>
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="check" id="check" value="checkedValue"
+                        checked>
+                    Check me out
+                </label>
+            </div>
+
+            <button type="button" class="btn btn-success btn-lg btn-block">Cadastrar</button>
+        </form>
+
+        <br>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
